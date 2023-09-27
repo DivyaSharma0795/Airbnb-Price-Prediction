@@ -29,3 +29,12 @@ airbnb$dist_to_dt <- apply(airbnb[,c("longitude","latitude")],1,function(x) dist
   c(-82.55481168521978,35.59701329976918),
   x,fun=distHaversine))*0.00062137
 ```
+
+```{r}
+library(tidyverse)
+airbnb$cleaned_price <- as.numeric(gsub(',','',str_sub(airbnb$price,2)))
+```
+
+```{r}
+
+```

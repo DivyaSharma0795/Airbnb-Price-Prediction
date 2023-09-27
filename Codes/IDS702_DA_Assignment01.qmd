@@ -7,5 +7,5 @@ jupyter: ir
 ---
 
 ```{r}
-
+initial_data <- read.csv('https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/raw/main/Resources/listings.csv')
 ```

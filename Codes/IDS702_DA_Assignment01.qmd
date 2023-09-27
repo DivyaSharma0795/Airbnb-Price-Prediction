@@ -5,7 +5,12 @@ format: html
 editor: visual
 jupyter: ir
 ---
-
+```{r}
+library(dplyr)
+```
 ```{r}
 initial_data <- read.csv('https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/raw/main/Resources/listings.csv')
+```
+```{r}
+glimpse(initial_data)
 ```

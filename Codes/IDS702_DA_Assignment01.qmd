@@ -32,7 +32,16 @@ airbnb$dist_to_dt <- apply(airbnb[,c("longitude","latitude")],1,function(x) dist
 
 ```{r}
 library(tidyverse)
+# Cleaning the Price variable - removing $ signs and commas
 airbnb$cleaned_price <- as.numeric(gsub(',','',str_sub(airbnb$price,2)))
+```
+
+```{r}
+# Cleaning the bathrooms column
+library(readr)
+airbnb$bathrooms_text <- tolower(airbnb$bathrooms_text)
+airbnb$bathrooms_text <- ifelse(grepl("half", airbnb$bathrooms_text, fixed = TRUE), "0.5",airbnb$bathrooms_text)
+airbnb$bathrooms_numeric <- parse_number(airbnb$bathrooms_text)
 ```
 
 ```{r}

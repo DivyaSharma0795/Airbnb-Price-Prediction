@@ -4,6 +4,8 @@ author: "Divya"
 format: html
 editor: visual
 jupyter: ir
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
@@ -46,4 +48,7 @@ airbnb$bathrooms_numeric <- parse_number(airbnb$bathrooms_text)
 
 ```{r}
 
+model_v1 <- lm(cleaned_price ~ room_type + bedrooms + dist_to_dt + bathrooms_numeric + accommodates + beds + minimum_nights + maximum_nights + has_availability + number_of_reviews + review_scores_rating + reviews_per_month + review_scores_location + review_scores_value + review_scores_communication + review_scores_checkin + review_scores_cleanliness + review_scores_accuracy
+               ,data = airbnb)
+summary(model_v1)
 ```

@@ -184,61 +184,11 @@ model_v2 <- lm(cleaned_price ~
                  has_pets +
                  has_microwave +
                  has_refrigerator +
-                 has_heating +
-                 neighbourhood_cleansed
+                 has_heating
                , data = airbnb)
 summary(model_v2)
 ```
 
 ```{r}
 vif(model_v2)
-```
-
-```{r}
-airbnb$neighbourhood_cleansed <- as.factor(airbnb$neighbourhood_cleansed)
-
-```
-
-```{r}
-airbnb_subset <- select(airbnb, c(
-  'cleaned_price'
-,'room_type'
-,'bedrooms'
-,'dist_to_dt'
-,'bathrooms_numeric'
-,'accommodates'
-,'beds'
-,'minimum_nights'
-,'maximum_nights'
-,'has_availability'
-,'number_of_reviews'
-,'review_scores_rating'
-,'reviews_per_month'
-,'review_scores_location'
-,'review_scores_value'
-,'review_scores_communication'
-,'review_scores_checkin'
-,'review_scores_cleanliness'
-,'review_scores_accuracy'
-,'host_has_profile_pic'
-,'host_identity_verified'
-,'host_verification_email'
-,'host_verification_phone'
-,'host_has_profile_pic'
-,'host_identity_verified'
-,'host_is_superhost'
-,'has_ac'
-,'has_parking'
-,'has_wifi'
-,'has_kitchen'
-,'has_pets'
-,'has_microwave'
-,'has_refrigerator'
-,'has_heating'
-,'neighbourhood_cleansed'  
-))
-```
-
-```{r}
-glimpse(airbnb_subset)
 ```

@@ -86,6 +86,18 @@ Assuming that the model has been trained on a dataset of Airbnb listings in Ashe
 
 ### Section 2.1 Model Selection
 
+We have chosen linear regression over other models for predicting Airbnb prices because of the following reasons:
+
+-   **Simplicity:** Linear regression is a relatively simple model to understand and implement. This makes it a good choice for cases where interpretability is important.
+
+-   **Interpretability:** The coefficients of a linear regression model can be interpreted directly as the effect of each input variable on the output variable. This can be helpful for understanding the factors that drive Airbnb prices and for making predictions.
+
+-   **Efficiency:** Linear regression models are typically very efficient to train and predict with. This makes them a good choice for applications where speed is important, such as real-time Airbnb pricing.
+
+-   **Robustness:** Linear regression models are relatively robust to outliers and noise in the data. This makes them a good choice for real-world Airbnb datasets, which may contain outliers due to factors such as seasonal demand and special events.
+
+In addition to these general advantages, linear regression has also been shown to be effective for predicting Airbnb prices in a number of studies. For example, a study by Airbnb found that linear regression was able to predict Airbnb prices with an accuracy of over 90%.
+
 ### Section 2.2 Data Cleaning and EDA
 
 The data used for this analysis is from [Inside Airbnb](http://insideairbnb.com/get-the-data), specifically, from [here](https://anlane611.github.io/ids702-fall23/DAA/listings.csv). The data contains basic details about Airbnbs listed in Asheville, North Carolina. The data dictionary for this dataset can be found [here](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1322284596)
@@ -110,7 +122,7 @@ There are 3,239 listings of Airbnbs which consist of mostly entire homes (87%), 
 
 The Price ranges from \$14/Night to \$2,059/Night. The average price is \$180/Night (indicated by the red line in the chart).
 
-![](http://127.0.0.1:30463/graphics/c849b1ef-2315-40d7-aa66-bcc98a98bd9d.png){width="558" height="558"}
+`![Distribution_of_Price.png](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/Distribution_of_Price.png)`
 
 ### Section 2.3 Inputs to the model
 

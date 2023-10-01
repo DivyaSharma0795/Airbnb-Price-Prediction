@@ -1,0 +1,27 @@
+---
+title: "Airbnb Pricing Project"
+author: "Divya Sharma"
+format: pdf
+editor: visual
+jupyter: ir
+---
+
+## Data Analysis Assignment 01
+
+*Divya Sharma (ds655)*
+
+### Airbnb pricing in Asheville, NC
+
+Airbnb is a popular online platform that allows people to rent out their homes to travelers. Airbnb hosts set their own prices, but they can benefit from having accurate information about how much to charge. This project aims to develop a linear machine learning model to predict the price of Airbnb listings in Asheville, NC.
+
+The model will be trained on a dataset of Airbnb listings that includes information such as the distance to downtown, the number of bedrooms and bathrooms, the amenities offered, and the reviews received. The model will then be used to predict the price of new Airbnb listings based on the same features.
+
+This project has the potential to benefit both Airbnb hosts and guests. Airbnb hosts can use the model to set competitive prices that are likely to attract guests. Airbnb guests can use the model to find the best deals on rentals.
+
+Benefits of the Project
+
+The Airbnb price prediction project has a number of potential benefits, including:
+
+-   Helping Airbnb hosts to set competitive prices and improve their listings. By understanding how much guests are willing to pay for different types of listings and amenities, Airbnb hosts can set their prices accordingly. This can help them to attract more guests and increase their earnings.
+-   Helping Airbnb guests to find the best deals on rentals. By using the model to predict the price of different Airbnb listings, guests can find the best deals on rentals that meet their needs. This can help them to save money on their vacations.
+-   Conducting research on the impact of Airbnb on the local economy and community. The data collected for this project can be used to conduct research on the impact of Airbnb on the local economy and community. For example, researchers could look at how Airbnb rentals are distributed across different neighborhoods and how Airbnb prices compare to hotel prices.

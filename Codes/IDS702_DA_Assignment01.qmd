@@ -192,3 +192,51 @@ summary(model_v2)
 ```{r}
 vif(model_v2)
 ```
+
+```{r}
+plot(model_v2)
+```
+
+```{r}
+# Insert R code chunk to generate summary table
+quarto_chunk(doc, "summary_table", "R", "
+  # Generate summary table
+  summary_table <- summary(model_v2)
+  summary_table
+")
+
+# Insert R code chunk to generate VIF plot
+quarto_chunk(doc, "vif_plot", "R", "
+  # Generate VIF plot
+  library(car)
+  vif_plot <- plot(vif(model_v2))
+  vif_plot
+")
+
+# Insert R code chunk to generate diagnostic plots
+quarto_chunk(doc, "diagnostic_plots", "R", "
+  # Generate diagnostic plots
+  plot_list <- plot(model_v2)
+  plot_list
+")
+
+# Save and render the document
+quarto_render(doc)
+```
+
+```{r}
+library(car)
+vif_plot <- plot(vif(model_v2))
+vif_plot
+
+# Generate diagnostic plots
+plot_list <- plot(model_v2)
+plot_list
+```
+
+```{r}
+library(ggplot2)
+ggplot(airbnb, aes(x=cleaned_price)) + 
+  geom_histogram() + 
+  geom_vline(aes(xintercept=mean(cleaned_price, na.rm=T)), color="red", linetype="dashed", size=1)
+```

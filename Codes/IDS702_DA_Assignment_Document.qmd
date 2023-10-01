@@ -85,6 +85,16 @@ Example:
 
 Imagine that you are an Airbnb host and you want to set a price for your listing. You could use the linear regression model to predict how much guests are willing to pay for your listing based on its distance to downtown, the number of bedrooms and bathrooms, the amenities offered, and the reviews received.
 
-You could also use the model to see how your listing compares to other listings in the area. For example, you could compare the predicted price of your listing to the actual prices of other listings that are similar in terms of distance to downtown, number of bedrooms and bathrooms, amenities offered, and reviews received.
-
 This information could help you to set a competitive price for your listing and maximize your earnings.
+
+## Metrics
+
+To justify my model, I would use the following model metrics:
+
+-   **R-squared:** R-squared can be interpreted as the percentage of variation in the target variable (price) that is explained by the predictor variables (room type, bedrooms, dist_to_dt, etc.). R-squared is a measure of how well the model fits the data, and ranges from 0 to 1, with a higher value indicating a better fit. In this case, the R-squared value is 0.5865, which means that the model explains \~60% of the variation in the price of Airbnb listings.
+
+-   **F-statistic:** The F-statistic is a test of whether the model is a significant improvement over a simpler model, such as a model with no predictor variables. In this case, the F-statistic is 93.31 and the p-value is less than 2.2e-16, which means that the model is a significant improvement over a simpler model.
+
+Assuming that the model has been trained on a dataset of Airbnb listings in Asheville, NC, we can predict that the price of a listing with 2 bedrooms, 2 bathrooms, and a distance to downtown of 1 mile would be around \$200 per night. It is important to note that this is just a prediction. The actual price of the listing may vary depending on other factors, such as the time of year, the amenities offered, and the reviews received.
+
+

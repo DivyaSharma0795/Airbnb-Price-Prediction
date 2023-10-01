@@ -18,10 +18,73 @@ The model will be trained on a dataset of Airbnb listings that includes informat
 
 This project has the potential to benefit both Airbnb hosts and guests. Airbnb hosts can use the model to set competitive prices that are likely to attract guests. Airbnb guests can use the model to find the best deals on rentals.
 
-Benefits of the Project
+### Benefits of the Project
 
 The Airbnb price prediction project has a number of potential benefits, including:
 
 -   Helping Airbnb hosts to set competitive prices and improve their listings. By understanding how much guests are willing to pay for different types of listings and amenities, Airbnb hosts can set their prices accordingly. This can help them to attract more guests and increase their earnings.
 -   Helping Airbnb guests to find the best deals on rentals. By using the model to predict the price of different Airbnb listings, guests can find the best deals on rentals that meet their needs. This can help them to save money on their vacations.
 -   Conducting research on the impact of Airbnb on the local economy and community. The data collected for this project can be used to conduct research on the impact of Airbnb on the local economy and community. For example, researchers could look at how Airbnb rentals are distributed across different neighborhoods and how Airbnb prices compare to hotel prices.
+
+### The Model
+
+The model that was used to analyze the Airbnb dataset is a linear regression model. Linear regression is a simple but powerful machine learning algorithm that can be used to predict the value of a variable (the price) based on the values of other variables (the information we have on the listings).
+
+Linear Regression is a simple predictive model that can easily be interpreted
+
+The variables that I included in the model are:
+
+```         
+    Room type: The type of Airbnb listing, such as private room, entire home, or shared room.
+    Bedrooms: The number of bedrooms in the Airbnb listing.
+    Dist_to_dt: The distance to downtown Asheville.
+    Bathrooms_numeric: The number of bathrooms in the Airbnb listing.
+    Accommodates: The maximum number of guests that the Airbnb listing can accommodate.
+    Beds: The number of beds in the Airbnb listing.
+    Minimum_nights: The minimum number of nights that guests can stay in the Airbnb listing.
+    Has_availability: Whether or not the Airbnb listing is available on the date that the prediction is being made.
+    Number_of_reviews: The number of reviews that the Airbnb listing has received.
+    Review_scores_rating: The average rating of the reviews that the Airbnb listing has received.
+    Reviews_per_month: The average number of reviews that the Airbnb listing receives per month.
+    Review_scores_location: The average rating of the Airbnb listing's location.
+    Review_scores_value: The average rating of the Airbnb listing's value.
+    Review_scores_communication: The average rating of the Airbnb listing's communication.
+    Review_scores_checkin: The average rating of the Airbnb listing's checkin process.
+    Review_scores_cleanliness: The average rating of the Airbnb listing's cleanliness.
+    Review_scores_accuracy: The average rating of the Airbnb listing's accuracy.
+    Host_has_profile_pic: Whether or not the Airbnb host has a profile picture.
+    Host_identity_verified: Whether or not the Airbnb host's identity has been verified.
+    Host_verification_email: Whether or not the Airbnb host's email address has been verified.
+    Host_verification_phone: Whether or not the Airbnb host's phone number has been verified.
+    Host_has_profile_pic: Whether or not the Airbnb host has a profile picture.
+    Host_identity_verified: Whether or not the Airbnb host's identity has been verified.
+    Host_is_superhost: Whether or not the Airbnb host is a Superhost.
+    Has_ac: Whether or not the Airbnb listing has air conditioning.
+    Has_parking: Whether or not the Airbnb listing has parking.
+    Has_wifi: Whether or not the Airbnb listing has wifi.
+    Has_kitchen: Whether or not the Airbnb listing has a kitchen.
+    Has_pets: Whether or not the Airbnb listing allows pets.
+    Has_microwave: Whether or not the Airbnb listing has a microwave.
+    Has_refrigerator: Whether or not the Airbnb listing has a refrigerator.
+    Has_heating: Whether or not the Airbnb listing has heating.
+```
+
+### How the Model Accomplishes the Goal
+
+The linear regression model works by fitting a line to the data. The slope of the line represents the relationship between the target variable (price) and each of the predictor variables. For example, the slope of the line that represents the relationship between price and distance to downtown would be positive, because listings that are closer to downtown are generally more expensive.
+
+Once the model has been trained, it can be used to predict the price of new Airbnb listings by passing the values of the predictor variables to the model. For example, to predict the price of a listing that is 1 mile from downtown, has 2 bedrooms, 1 bathroom, and offers wifi and parking, the model would use the following equation:
+
+price = predicted_price = intercept + (importance of distance_to_downtown \* distance_to_downtown) + (importance of bedrooms \* bedrooms) + (slope_bathrooms \* bathrooms) + (slope_amenities \* amenities) + (slope_reviews \* reviews)
+
+The values of the intercept and the slopes would be determined by the model during the training process.
+
+It is important to note that linear regression is a simple model and may not be able to accurately predict the price of all Airbnb listings. However, it is a good starting point for developing a predictive model. The accuracy of the model can be improved by using more features and by using more complex machine learning algorithms. The model will learn the importance of each factor by training on a dataset of Airbnb listings. Once the model is trained, it can be used to predict the price of new Airbnb listings by passing the values of the factors to the model.
+
+Example:
+
+Imagine that you are an Airbnb host and you want to set a price for your listing. You could use the linear regression model to predict how much guests are willing to pay for your listing based on its distance to downtown, the number of bedrooms and bathrooms, the amenities offered, and the reviews received.
+
+You could also use the model to see how your listing compares to other listings in the area. For example, you could compare the predicted price of your listing to the actual prices of other listings that are similar in terms of distance to downtown, number of bedrooms and bathrooms, amenities offered, and reviews received.
+
+This information could help you to set a competitive price for your listing and maximize your earnings.

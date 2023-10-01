@@ -159,7 +159,7 @@ model_v2 <- lm(cleaned_price ~
                  accommodates + 
                  beds + 
                  minimum_nights + 
-                 #maximum_nights + 
+                 maximum_nights + 
                  has_availability + 
                  number_of_reviews + 
                  review_scores_rating + 
@@ -194,34 +194,10 @@ vif(model_v2)
 ```
 
 ```{r}
-plot(model_v2)
-```
-
-```{r}
-# Insert R code chunk to generate summary table
-quarto_chunk(doc, "summary_table", "R", "
-  # Generate summary table
-  summary_table <- summary(model_v2)
-  summary_table
-")
-
-# Insert R code chunk to generate VIF plot
-quarto_chunk(doc, "vif_plot", "R", "
-  # Generate VIF plot
-  library(car)
-  vif_plot <- plot(vif(model_v2))
-  vif_plot
-")
-
-# Insert R code chunk to generate diagnostic plots
-quarto_chunk(doc, "diagnostic_plots", "R", "
-  # Generate diagnostic plots
-  plot_list <- plot(model_v2)
-  plot_list
-")
-
-# Save and render the document
-quarto_render(doc)
+plot(model_v2, which = 1, main = "Diagnostic Plot 1: Residuals vs. Fitted Values")
+plot(model_v2, which = 2, main = "Diagnostic Plot 2: Normal Q-Q Plot")
+plot(model_v2, which = 3, main = "Diagnostic Plot 3: Scale-Location Plot")
+plot(model_v2, which = 4, main = "Diagnostic Plot 4: Residuals vs. Leverage")
 ```
 
 ```{r}
@@ -238,5 +214,8 @@ plot_list
 library(ggplot2)
 ggplot(airbnb, aes(x=cleaned_price)) + 
   geom_histogram() + 
-  geom_vline(aes(xintercept=mean(cleaned_price, na.rm=T)), color="red", linetype="dashed", size=1)
+  geom_vline(aes(xintercept=mean(cleaned_price, na.rm=T)), color="red", linetype="dashed", size=1) +
+  ggtitle("Distribution of Price in USD") +
+  xlab("Price (USD)") +
+  ylab("# of Listings")
 ```

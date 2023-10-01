@@ -20,15 +20,13 @@ This project has the potential to benefit both Airbnb hosts and guests. Airbnb h
 
 The Airbnb price prediction project has a number of potential benefits, including:
 
--   Helping Airbnb hosts to set competitive prices and improve their listings. By understanding how much guests are willing to pay for different types of listings and amenities, Airbnb hosts can set their prices accordingly. This can help them to attract more guests and increase their earnings.
--   Helping Airbnb guests to find the best deals on rentals. By using the model to predict the price of different Airbnb listings, guests can find the best deals on rentals that meet their needs. This can help them to save money on their vacations.
--   Conducting research on the impact of Airbnb on the local economy and community. The data collected for this project can be used to conduct research on the impact of Airbnb on the local economy and community. For example, researchers could look at how Airbnb rentals are distributed across different neighborhoods and how Airbnb prices compare to hotel prices.
+-   Helping Airbnb hosts to set competitive prices and improve their listings
+-   Helping Airbnb guests to find the best deals on rentals
+-   Conducting research on the impact of Airbnb on the local economy and community
 
 ### 1.2 The Model
 
-The model that was used to analyze the Airbnb dataset is a linear regression model. Linear regression is a simple but powerful machine learning algorithm that can be used to predict the value of a variable (the price) based on the values of other variables (the information we have on the listings).
-
-Linear Regression is a simple predictive model that can easily be interpreted
+The model that was used to analyze the Airbnb dataset is a linear regression model. Linear regression is a simple but powerful machine learning algorithm that can be used to predict the value of a variable (the price) based on the values of other variables (the information we have)
 
 The variables that are included in the model are:
 
@@ -43,9 +41,9 @@ For a more detailed description of each variable that has been fed into the mode
 
 ### 1.3 How the Model Accomplishes the Goal
 
-The linear regression model works by fitting a line to the data. The slope of the line represents the relationship between the target variable (price) and each of the predictor variables. For example, the slope of the line that represents the relationship between price and distance to downtown would be positive, because listings that are closer to downtown are generally more expensive.
+The linear regression model works by fitting a line to the data. The slope of the line represents the relationship between the target variable (price) and each of the predictor variables.
 
-Once the model has been trained, it can be used to predict the price of new Airbnb listings by passing the values of the predictor variables to the model. For example, to predict the price of a listing that is 1 mile from downtown, has 2 bedrooms, 1 bathroom, and offers wifi and parking, the model would use the following equation:
+Once the model has been trained, it can be used to predict the price of new Airbnb listings by passing the values of the predictor variables to the model. For example, based on the inputs for a new airbnb, the model would use the following equation to predict the price:
 
 ```         
 price = predicted_price = 
@@ -58,17 +56,15 @@ price = predicted_price =
   + (importance of Amenities * Amenities)
 ```
 
-It is important to note that linear regression is a simple model and may not be able to accurately predict the price of all Airbnb listings. However, it is a good starting point for developing a predictive model. The accuracy of the model can be improved by using more features and by using more complex machine learning algorithms. The model will learn the importance of each factor by training on a dataset of Airbnb listings. Once the model is trained, it can be used to predict the price of new Airbnb listings by passing the values of the factors to the model.
+It is important to note that linear regression is a simple model and may not be able to accurately predict the price of all Airbnb listings. However, it is a good starting point for developing a predictive model. The model will learn the importance of each factor by training on a dataset of Airbnb listings. Once the model is trained, it can be used to predict the price of new Airbnb listings by passing the values of the factors to the model.
 
 ### 1.4 Metrics
 
 To justify my model, I would use the following model metrics:
 
--   **R-squared:** R-squared can be interpreted as the percentage of variation in the target variable (price) that is explained by the predictor variables (room type, bedrooms, dist_to_dt, etc.). R-squared is a measure of how well the model fits the data, and ranges from 0 to 1, with a higher value indicating a better fit. In this case, the R-squared value is 0.5865, which means that the model explains \~60% of the variation in the price of Airbnb listings.
+-   **R-squared:** R-squared can be interpreted as the percentage of variation in the target variable (price) that is explained by the predictor variables (room type, bedrooms, dist_to_dt, etc.). We have the R-Square as 0.58
 
--   **F-statistic:** The F-statistic is a test of whether the model is a significant improvement over a simpler model, such as a model with no predictor variables. In this case, the F-statistic is 93.31 and the p-value is less than 2.2e-16, which means that the model is a significant improvement over a simpler model.
-
-Assuming that the model has been trained on a dataset of Airbnb listings in Asheville, NC, we can predict that the price of a listing with 2 bedrooms, 2 bathrooms, and a distance to downtown of 1 mile would be around \$200 per night. It is important to note that this is just a prediction. The actual price of the listing may vary depending on other factors, such as the time of year, the amenities offered, and the reviews received.
+-   **F-statistic:** The F-statistic is a test of whether the model is a significant improvement over a simpler model, such as a model with no predictor variables. We have the F-statistic as 93.31
 
 ## Section 2: Technical Report
 
@@ -114,8 +110,6 @@ The Price ranges from \$14/Night to \$2,059/Night. The average price is \$180/Ni
 
 `![Distribution_of_Price.png](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/Distribution_of_Price.png)`
 
-
-
 ### Section 2.3 Inputs to the model
 
 -   `Room type`: The type of Airbnb listing, such as private room, entire home, or shared room.
@@ -153,32 +147,20 @@ The Price ranges from \$14/Night to \$2,059/Night. The average price is \$180/Ni
 
 ### Section 2.4 Model Performance
 
-The linear regression model has an R-squared value of 0.58, which indicates that the model explains 58% of the variability in the response variable. The Residual Standard error value of 91.03 suggests that the model's predictions are off by an average of \$91.03. 
-The F-statistic of 93.31 and the p-value of < 2.2e-16 indicating that the model is statistically significant and that at least one of the predictor variables is significantly related to the response variable. 
-The median residual of -3.72 indicates that the median difference between the predicted and actual values is $3.72, which suggests that the model is reasonably accurate. 
-Overall, the model's performance is moderate, with room for improvement.
-
+The linear regression model has an R-squared value of 0.58, which indicates that the model explains 58% of the variability in the response variable. The Residual Standard error value of 91.03 suggests that the model's predictions are off by an average of \$91.03. The F-statistic of 93.31 and the p-value of \< 2.2e-16 indicating that the model is statistically significant and that at least one of the predictor variables is significantly related to the response variable. The median residual of -3.72 indicates that the median difference between the predicted and actual values is \$3.72, which suggests that the model is reasonably accurate. Overall, the model's performance is moderate, with room for improvement.
 
 #### 2.4.2 Charts
-The diagnostic plots for the model are as below - 
 
+The diagnostic plots for the model are as below -
 
-[1. Residuals vs Fitted Values](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/Residuals_vs_Fitted.png)
-This chart is used to check the linearity and homoscedasticity assumptions of a linear regression model by plotting the residuals against the fitted values.
+[1. Residuals vs Fitted Values](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/Residuals_vs_Fitted.png) This chart is used to check the linearity and homoscedasticity assumptions of a linear regression model by plotting the residuals against the fitted values.
 
+[2. Q-Q Plot](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/qq_residuals.png) This chart is a graphical technique used to compare the distribution of a the predicted to the actual distribution by plotting the quantiles of the predicted data against the quantiles of the actual distribution.
 
-[2. Q-Q Plot](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/qq_residuals.png)
-This chart is a graphical technique used to compare the distribution of a the predicted to the actual distribution by plotting the quantiles of the predicted data against the quantiles of the actual distribution.
+[3. Scale-Location Plot](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/scale_location.png) This plot is used to check the homoscedasticity assumption of a linear regression model by plotting the square root of the absolute standardized residuals against the fitted values.
 
-
-[3. Scale-Location Plot](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/scale_location.png)
-This plot is used to check the homoscedasticity assumption of a linear regression model by plotting the square root of the absolute standardized residuals against the fitted values.
-
-
-[4. Reiduals vs Leverage Plot](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/residuals_vs_leverage.png)
-This plot is used to check for influential observations in the linear regression model by plotting the standardized residuals against the leverage of each observation.
-
-
+[4. Reiduals vs Leverage Plot](https://github.com/DivyaSharma0795/IDS702_Data_Analysis_Assignment_1/blob/main/Resources/residuals_vs_leverage.png) This plot is used to check for influential observations in the linear regression model by plotting the standardized residuals against the leverage of each observation.
 
 ### Section 2.5 Conclusion
+
 Based on the linear regression model used to predict Airbnb prices, with an R-squared value of 0.58, we can conclude that the model explains 58% of the variability in the response variable. While this is not a perfect fit, it suggests that the model is moderately effective in predicting Airbnb prices. However, there may be factors like seasonality that are excluded in the current methodolgy that can help identify the prices more accurately

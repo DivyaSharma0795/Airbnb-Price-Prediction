@@ -1,0 +1,26 @@
+```{r}
+library(ISLR2)
+data("Boston")
+?Boston
+```
+
+```{r}
+library(caret)
+```
+
+```{r}
+#note that cross validation involves a random sampling component, so we should use a seed for reproducibility
+set.seed(921) 
+train_control <- trainControl(method = "cv", number = 10)
+
+mod_full <- train(medv ~., data = Boston,
+                     method = "lm",
+                     trControl = train_control)
+
+#get model metrics
+print(mod_full)
+```
+
+```{r}
+
+```
